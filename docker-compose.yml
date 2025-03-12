@@ -1,0 +1,28 @@
+# compose.yaml
+services:
+  frankenphp:
+    build:
+      context: .
+    entrypoint: php artisan octane:frankenphp
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+
+#   db:
+#     image: postgis/postgis:17-3.5-alpine
+#     restart: unless-stopped
+#     container_name: devcom-db
+#     environment:
+#       - POSTGRES_DB= ${DB_DATABASE}
+#       - POSTGRES_USER= ${DB_USERNAME}
+#       - POSTGRES_PASSWORD= ${DB_PASSWORD}
+#     ports:
+#       - 5432:5432
+#     volumes:
+#       - db_data: /var/lib/postgresql/data
+
+# volumes:
+#   db_data:
+#     driver: local
+#     name: devcom-db-data

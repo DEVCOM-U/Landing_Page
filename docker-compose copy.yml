@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  devcom_u:
+    container_name: devcom_u
+    image: image_devcom_u
+    build: 
+      dockerfile: worker.dockerfile
+      context: .
+    ports:
+      - 8001:8000
+    env_file:
+      - .env
