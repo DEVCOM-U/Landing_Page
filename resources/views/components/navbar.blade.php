@@ -1,21 +1,22 @@
-<nav class="bg-white sticky w-full z-20 top-0 left-0 border-b border-gray-200">
+<nav class="bg-white sticky w-full z-20 top-0 left-0 border-b border-gray-200 ">
     <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
         <!-- Logo di kiri -->
         <a href="{{ url('/') }}" class="flex items-center">
-            <img src="{{ asset('/img/devcom-logo.png') }}" class="w-12" alt="Devcom Logo">
+            <img src="{{ asset('img/devcom-logo.png') }}" class="w-12" alt="Devcom Logo">
         </a>
 
         <!-- Menu Utama (Desktop) -->
         <div class="hidden md:flex flex-1 justify-center">
             <ul class="flex space-x-6 text-center">
-                <li><a href="{{ url('/') }}" class="text-gray-900 p-2 rounded-md hover:bg-gray-200 focus:ring">Home</a></li>
-                <li><a href="#" class="text-gray-900 p-2 rounded-md hover:bg-gray-200 focus:ring">About</a></li>
-                <li><a href="{{ url('/projects') }}" class="text-gray-900 p-2 rounded-md hover:bg-gray-200 focus:ring">Project</a></li>
-                <li><a href="#" class="text-gray-900 p-2 rounded-md hover:bg-gray-200 focus:ring">Activity</a></li>
-                <li><a href="#" class="text-gray-900 p-2 rounded-md hover:bg-gray-200 focus:ring">Team</a></li>
-                <li><a href="#" class="text-gray-900 p-2 rounded-md hover:bg-gray-200 focus:ring">Contact</a></li>
+                <li> <x-navlink href="/" :active="request()->is('/')">Home</x-navlink> </li>
+                <li> <x-navlink href="/about" :active="request()->is('about')">About</x-navlink> </li>
+                <li> <x-navlink href="/projects" :active="request()->is('projects')">Project</x-navlink> </li>
+                <li> <x-navlink href="/activity" :active="request()->is('activity')">Activity</x-navlink> </li>
+                <li> <x-navlink href="/team" :active="request()->is('team')">Team</x-navlink> </li>
+                <li> <x-navlink href="/contact" :active="request()->is('contact')">Contact</x-navlink> </li>
             </ul>
         </div>
+        
 
         <!-- Tombol hamburger (Mobile) -->
         <div x-data="{ open: false }" class="md:hidden">
@@ -36,12 +37,12 @@
                 class="absolute left-0 top-full w-full bg-white shadow-md md:hidden"
             >
                 <ul class="flex flex-col text-center space-y-2 p-4">
-                    <li><a href="{{ url('/') }}" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-200 focus:ring">Home</a></li>
-                    <li><a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-200 focus:ring">About</a></li>
-                    <li><a href="{{ url('/projects') }}" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-200 focus:ring">Project</a></li>
-                    <li><a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-200 focus:ring">Activity</a></li>
-                    <li><a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-200 focus:ring">Team</a></li>
-                    <li><a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-200 focus:ring">Contact</a></li>
+                    <li><a href="/" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-200 focus:ring">Home</a></li>
+                    <li><a href="/about" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-200 focus:ring">About</a></li>
+                    <li><a href="/projects" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-200 focus:ring">Project</a></li>
+                    <li><a href="activity" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-200 focus:ring">Activity</a></li>
+                    <li><a href="team" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-200 focus:ring">Team</a></li>
+                    <li><a href="contact" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-200 focus:ring">Contact</a></li>
                 </ul>
             </div>
         </div>
