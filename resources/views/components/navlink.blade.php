@@ -1,1 +1,1 @@
-<a {{ $attributes }} class="{{ $active ? 'text-blue-700' : "text-gray-900" }} p-2 rounded-md hover:bg-gray-200 focus:ring">{{ $slot }}</a>
+<a {{ $attributes }} class="text-gray-900 p-2 rounded-md hover:bg-gray-200 focus:ring hover:text-primary transition duration-300 ease-out {{ $active ? 'text-primary font-semibold' : '' }}">{{ $slot }}</a>

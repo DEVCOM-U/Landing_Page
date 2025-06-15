@@ -1,37 +1,35 @@
-<footer class="">
-    <div class="container mx-auto px-6 flex flex-col mt-10 md:flex-row md:justify-between gap-10">
-        <div class="md:basis-1/2 text-center md:text-left">
-            <img src="{{ asset('img/logo.png') }}" alt="Devcom Logo" class="w-64 mx-auto md:mx-0 mb-4" />
-            <p class="text-lg md:text-xl mx-7">
-                We Make <span class="font-extrabold italic">Space</span> <br />
-                For Your <span class="font-extrabold italic">Creativity</span>
-            </p>
-        </div>
-
-        <div class="md:basis-1/4 text-center md:text-left">
-            <ul class="space-y-3 text-lg">
-                <li><a href="/home" class="hover:underline">Home</a></li>
-                <li><a href="/about" class="hover:underline">About</a></li>
-                <li><a href="/projects" class="hover:underline">Project</a></li>
-                <li><a href="/activity" class="hover:underline">Activity</a></li>
-                <li><a href="/team" class="hover:underline">Team</a></li>
-                <li><a href="/contact" class="hover:underline">Contact</a></li>
-            </ul>
-        </div>
-
-        <div class="md:basis-1/4 text-center md:text-left">
-            <h5 class="text-lg mb-4">Social Media</h5>
-            <div class="flex md:flex-col justify-center md:justify-start gap-6 text-2xl md:text-5xl">
-                <a href="https://www.instagram.com/devcom_u/" class="hover:text-[#E1306C] transition duration-300">
-                    <i class="bi bi-instagram"></i>
-                </a>
-                <a href="#" class="hover:text-[#0077B5] transition duration-300">
-                    <i class="bi bi-linkedin"></i>
-                </a>
+<footer class="bg-white mt-12 w-full">
+    <div
+        class="max-w-6xl mx-auto py-8 px-6 flex flex-col md:flex-row sm:flex-row sm:justify-start sm:gap-10 justify-center items-start gap-8">
+        <div>
+            <img src="/img/devcomu_footer.png" alt="" width="180" height="180" class="mb-2">
+            <div class="md:px-4 px-2">
+                <p class="text-lg">We Make <span class="font-bold italic">Space</span> </p>
+                <p class="text-lg">For Your <span class="font-bold italic">Creativity</span></p>
             </div>
         </div>
+        <div class="gap-10">
+            <div class="flex flex-row justify-between gap-20">
+
+                <ul class="*:text-lg md:px-4 px-2 text-gray-700 space-y-2">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Activity</li>
+                    <li>Team</li>
+                    <li>Contact</li>
+                </ul>
+                <div class="flex flex-col mt-5 px-2">
+                    <x-common.socmed href="https://example.com" src="/svg/instagram.svg" alt="Example Image" />
+                    <x-common.socmed href="https://example.com" src="/svg/facebook.svg" alt="Example Image" />
+                    <x-common.socmed href="https://example.com" src="/svg/youtube.svg" alt="Example Image" />
+                </div>
+            </div>
+
+        </div>
     </div>
-    <div class="bg-black mt-10 text-yellow-200 p-5 text-center text-xs">
-        <p>2025 DevCom U | Developer Community U All Rights Reserved</p>
+    <div class="bg-[#fafafa] px-2 w-full">
+        <p class="text-center text-xs  text-gray-500 p-4  md:text-xl">2025 DevCom UI | Developer Community UI
+            All
+            Right Reserved</p>
     </div>
 </footer>

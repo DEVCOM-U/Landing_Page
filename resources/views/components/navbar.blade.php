@@ -1,4 +1,4 @@
-<nav class="bg-white sticky w-full z-20 top-0 left-0 border-b border-gray-200 ">
+<nav class="bg-white sticky dark:bg-gray-900 w-full z-20 top-0 left-0 border-gray-200 dark:border-gray-600">
     <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
         <!-- Logo di kiri -->
         <a href="{{ url('/') }}" class="flex items-center">
@@ -8,22 +8,20 @@
         <!-- Menu Utama (Desktop) -->
         <div class="hidden md:flex flex-1 justify-center">
             <ul class="flex space-x-6 text-center">
-                <li> <x-navlink href="/" :active="request()->is('/')">Home</x-navlink> </li>
-                <li> <x-navlink href="/about" :active="request()->is('about')">About</x-navlink> </li>
-                <li> <x-navlink href="/projects" :active="request()->is('projects')">Project</x-navlink> </li>
-                <li> <x-navlink href="/activity" :active="request()->is('activity')">Activity</x-navlink> </li>
-                <li> <x-navlink href="/team" :active="request()->is('team')">Team</x-navlink> </li>
-                <li> <x-navlink href="/contact" :active="request()->is('contact')">Contact</x-navlink> </li>
+                <x-navlink href="/" :active="Request::is('/')">Home</x-navlink>
+                <x-navlink href="#" :active="Request::is('about')">About</x-navlink>
+                <x-navlink href="/projects" :active="Request::is('projects')">Project</x-navlink>
+                <x-navlink href="#" :active="Request::is('activity')">Activity</x-navlink>
+                <x-navlink href="#" :active="Request::is('team')">Team</x-navlink>
+                <x-navlink href="#" :active="Request::is('contact')">Contact</x-navlink>
             </ul>
         </div>
-        
+
 
         <!-- Tombol hamburger (Mobile) -->
         <div x-data="{ open: false }" class="md:hidden">
-            <button 
-                @click="open = !open"
-                class="p-2 w-10 h-10 text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
-            >
+            <button @click="open = !open"
+                class="p-2 w-10 h-10 text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -31,18 +29,15 @@
             </button>
 
             <!-- Menu Mobile -->
-            <div 
-                x-show="open"
-                @click.away="open = false"
-                class="absolute left-0 top-full w-full bg-white shadow-md md:hidden"
-            >
+            <div x-show="open" @click.away="open = false"
+                class="absolute left-0 top-full w-full bg-white dark:bg-gray-900 shadow-md md:hidden">
                 <ul class="flex flex-col text-center space-y-2 p-4">
-                    <li><a href="/" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-200 focus:ring">Home</a></li>
-                    <li><a href="/about" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-200 focus:ring">About</a></li>
-                    <li><a href="/projects" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-200 focus:ring">Project</a></li>
-                    <li><a href="activity" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-200 focus:ring">Activity</a></li>
-                    <li><a href="team" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-200 focus:ring">Team</a></li>
-                    <li><a href="contact" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-200 focus:ring">Contact</a></li>
+                    <x-navlink href="/" :active="Request::is('/')">Home</x-navlink>
+                    <x-navlink href="#" :active="Request::is('about')">About</x-navlink>
+                    <x-navlink href="/projects" :active="Request::is('projects')">Project</x-navlink>
+                    <x-navlink href="#" :active="Request::is('activity')">Activity</x-navlink>
+                    <x-navlink href="#" :active="Request::is('team')">Team</x-navlink>
+                    <x-navlink href="#" :active="Request::is('contact')">Contact</x-navlink>
                 </ul>
             </div>
         </div>
