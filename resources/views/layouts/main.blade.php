@@ -24,7 +24,6 @@
         </main>
     </div>
 
-
 </body>
 
 </html>

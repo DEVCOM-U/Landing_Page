@@ -16,7 +16,7 @@
                 <h2 class="text-xl md:text-2xl font-bold mb-2 md:mb-0 md:w-[60%]">Visi</h2>
                 <p class="md:w-3/4">
                   Menjadi ruang kreatif terdepan yang mendukung pertumbuhan dan inovasi bagi komunitas kreatif di
-                  seluruh Indonesia.
+                  seluruh Indonesia. dasdjasjdoi
                 </p>
               </div>
               <div class="p-6 md:mx-20 bg-white rounded-lg shadow flex flex-col md:flex-row md:items-start md:justify-between">
