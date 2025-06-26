@@ -1,4 +1,4 @@
-<nav class="bg-white sticky w-full z-20 top-0 left-0 border-b border-gray-200 ">
+<nav class="bg-white sticky w-full z-20 top-0 left-0 border-b border-gray-200">
     <div class="max-w-screen-xl flex items-center justify-between mx-auto p-4">
         <!-- Logo di kiri -->
         <a href="{{ url('/') }}" class="flex items-center">
