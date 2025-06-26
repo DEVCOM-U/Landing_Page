@@ -2,10 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('pages.home');
-});
-
 $activities = [
     'activity-pertama' => [
         'title' => 'Activity Pertama',
@@ -87,3 +83,14 @@ Route::get('/projects/{slug}', function ($slug) use ($projects) {
 
 // ------------------------------------
 
+Route::get('/', function () {
+    return view('pages.home');
+});
+
+Route::get('/contact', function () {
+    return view('pages.contact');
+});
+
+Route::get('/team', function () {
+    return view('pages.team-pages');
+});
