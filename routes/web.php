@@ -94,3 +94,7 @@ Route::get('/contact', function () {
 Route::get('/team', function () {
     return view('pages.team-pages');
 });
+
+Route::get('/about', function () {
+    return view('pages.about-pages');
+});
